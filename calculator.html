@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+
+</head>
+<body>
+
+<div class="wrap">
+    <table>
+        <tr>
+            <td colspan="4" id="screen"></td>
+        </tr>
+        <tr>
+            <td><button name="num" value="1" onclick="calculate(this)">1</button></td>
+            <td><button name="num" value="2" onclick="calculate(this)">2</button></td>
+            <td><button name="num" value="3" onclick="calculate(this)">3</button></td>
+            <td><button name="num" value="4" onclick="calculate(this)">4</button></td>
+        </tr>
+        <tr>
+            <td><button name="num" value="5" onclick="calculate(this)">5</button></td>
+            <td><button name="num" value="6" onclick="calculate(this)">6</button></td>
+            <td><button name="num" value="7" onclick="calculate(this)">7</button></td>
+            <td><button name="num" value="8" onclick="calculate(this)">8</button></td>
+        </tr>
+        <tr>
+            <td><button name="num" value="9" onclick="calculate(this)">9</button></td>
+            <td><button name="num" value="0" onclick="calculate(this)">0</button></td>
+            <td><button name="num" value="+" onclick="calculate(this)">+</button></td>
+            <td><button name="num" value="-" onclick="calculate(this)">-</button></td>
+        </tr>
+        <tr>
+            <td><button name="num" value="/" onclick="calculate(this)">/</button></td>
+            <td><button name="num" value="*" onclick="calculate(this)">*</button></td>
+            <td><button name="num" value="." onclick="calculate(this)">.</button></td>
+            <td><button name="num" value="clear" onclick="cleared()">clear</button></td>
+        </tr>
+        <tr>
+            <td><button name="num" value="=" onclick="calculated()">=</button></td>
+        </tr>
+    </table>
+</div>
+
+
+    <script>
+        function calculate(x) {
+            var display = document.getElementById('screen');
+            var num = document.getElementsByName('num');
+
+            /*for (var i = 0; i < num.length; i++) {
+                var num = num[i];
+            }*/
+            if (true) {
+                display.innerHTML += x.value;
+            }
+        };
+        
+        function cleared() {
+            var display = document.getElementById('screen');
+            display.innerHTML = "";
+        };
+
+        function calculated() {
+            var display = document.getElementById('screen');
+            display.innerHTML = eval(display.innerText);
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
